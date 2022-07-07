@@ -62,7 +62,7 @@ return [
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
-            'strict' => true,
+            'strict' => false,
             'engine' => null,
         ],
 
@@ -79,6 +79,16 @@ return [
             'sslmode' => 'prefer',
         ],
 
+        'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_HOST_CAMPUS', 'localhost'),
+            'port' => env('DB_PORT_CAMPUS', '1433'),
+            'database' => env('DB_DATABASE_CAMPUS', 'forge'),
+            'username' => env('DB_USERNAME_CAMPUS', 'forge'),
+            'password' => env('DB_PASSWORD_CAMPUS', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+        ],
     ],
 
     /*
