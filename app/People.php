@@ -9,7 +9,7 @@ use Illuminate\Auth\Authenticatable;
 
 class People extends Model implements AuthenticatableContract
 {
-    use Authenticatable;
+    use Authenticatable, HasApiTokens;
 
     protected $connection= 'sqlsrv';
     protected $table = 'people';
