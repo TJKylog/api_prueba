@@ -30,7 +30,7 @@ class AuthController extends Controller
         $people = People::where('id',$request->id)->first();
         if(isset($people)) {
             $tokenResult = $people->createToken('Token');
-
+            
             return response()->json([
                 'access_token' => $tokenResult->accessToken,
                 'token_type' => 'Bearer',

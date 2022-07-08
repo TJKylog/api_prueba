@@ -9,7 +9,7 @@ class CredentialInfoController extends Controller
 {
     public function getCredentialInfo(Request $request)
     {
-        $people = Auth::guard('people')->user();
+        $people = Auth::guard('api')->user();
         return response()->json([
             'name' => $people->name,
             'email' => $people->email

@@ -42,10 +42,6 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-        ],
-        'people' => [
             'driver' => 'passport',
             'provider' => 'people',
         ]
@@ -75,7 +71,7 @@ return [
         ],
         'people' => [
             'driver' => 'eloquent',
-            'provider' => App\People::class,
+            'model' => App\People::class,
         ],
 
         // 'users' => [
